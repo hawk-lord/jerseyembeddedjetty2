@@ -1,0 +1,20 @@
+An application to create annuity payment plans.
+
+Input parameters
+Duration (months)
+Interest rate (percent, can have decimals)
+Principal amount (any currency, can have decimals)
+Start date (ISO format, yyyy-mm-dd).
+
+
+
+Start with:
+cd \IdeaProjects\jerseyembeddedjetty
+java -jar java -jar target/JerseyJettyEx.jar
+
+Usage:
+curl -X POST -i -H "Accept: application/json" \
+-H "Content-Type: application/json" http://localhost:8080/rest/api/generate-plan \
+-d '{"duration":"24", "interestRate":"5", "principalAmount":"5000", "startDate":"2018-01-01"}'
+
+
